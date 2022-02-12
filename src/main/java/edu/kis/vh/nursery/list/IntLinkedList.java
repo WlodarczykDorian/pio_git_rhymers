@@ -10,9 +10,9 @@ public class IntLinkedList {
 				if (lastNode == null)
 						lastNode = new Node(i);
 				else {
-						lastNode.nextNode = new Node(i);
-						lastNode.nextNode.prevNode = lastNode;
-						lastNode = lastNode.nextNode;
+						lastNode.setnextNode(new Node(i));
+						lastNode.getnextNode().setprevNode(lastNode);
+						lastNode = lastNode.getNextNode();
 				}
 		}
 
@@ -24,17 +24,17 @@ public class IntLinkedList {
 				return false;
 		}
 
-		public int top() {
+		public int topValue() {
 				if (isEmpty())
 						return VALUE_WHEN_EMPTY_ARRAY;
-				return lastNode.value;
+				return lastNode.getValue();
 		}
 
 		public int pop() {
 				if (isEmpty())
 						return VALUE_WHEN_EMPTY_ARRAY;
-				int ret = lastNode.value;
-				lastNode = lastNode.prevNode;
+				int ret = lastNode.getValue();
+				lastNode = lastNode.getPrevNode();
 				return ret;
 		}
 
