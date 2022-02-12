@@ -12,11 +12,7 @@ public class Node {
 		}
 
 		protected  int getValue() {
-			return value;
-		}
-
-		protected  void  setValue(int value) {
-				this.value =value;
+				return value;
 		}
 
 		protected Node getPrevNode() {
