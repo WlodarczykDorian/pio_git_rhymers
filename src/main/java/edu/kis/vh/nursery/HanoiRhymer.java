@@ -2,16 +2,18 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends defaultCountingOutRhymer {
 
-int totalRejected = 0;
+		int totalRejected = 0;
 
-	public int reportRejected() {
-		return totalRejected;
-	}
+		public int reportRejected() {
+				return totalRejected;
+		}
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+		public void countIn(int in) {
+				if (!callCheck() && in > peekaboo())
+						totalRejected++;
+				else
+						super.countIn(in);
+		}
 }
+//zle sformatowane linijki kodu to 5,12,13,14,15
+//polecenie alt ze strzalka oznacza przelaczanie sie miedzy ostatnimi edytorami , strzlka w lewo cofa , strzalka w prawo idzie dalej
