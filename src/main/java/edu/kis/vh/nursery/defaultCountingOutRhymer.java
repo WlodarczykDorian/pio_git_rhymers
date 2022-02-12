@@ -6,6 +6,10 @@ public class DefaultCountingOutRhymer {
 
 		private int countOfNumbers = -1;
 
+		public int getCountOfNumbers() {
+				return countOfNumbers;
+		}
+
 		public void countIn(int in) {
 				if (!isFull())
 						tableOfNumbers[++countOfNumbers] = in;
